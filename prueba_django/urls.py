@@ -20,5 +20,6 @@ from usuarios.views import *
 urlpatterns = [
     path('', index),
     path('admin/', admin.site.urls),
-    path('accounts/', include('django.contrib.auth.urls'))
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('usuarios/', include(('usuarios.urls', 'usuarios'), namespace='usuarios'))
 ]
